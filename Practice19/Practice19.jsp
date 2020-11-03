@@ -46,16 +46,14 @@ margin-right:20px;
 Calendar cal = Calendar.getInstance();
 int year = cal.get(Calendar.YEAR);
 int month = cal.get(Calendar.MONTH)+1;//0~
-cal.set(year, month+1, 1);
 int date = cal.get(Calendar.DATE);
 int day = cal.get(Calendar.DAY_OF_WEEK);//1~
 int start = cal.getMinimum(Calendar.DATE);
 int end = cal.getActualMaximum(Calendar.DATE);
 
 Calendar today = Calendar.getInstance();
-today.set(2020, 10, 20);
 int today_year = today.get(Calendar.YEAR);//2020
-int today_month = today.get(Calendar.MONTH);//10
+int today_month = today.get(Calendar.MONTH)+1;//10
 int today_date = today.get(Calendar.DATE);//20
 
 int cnt = 0;
@@ -64,18 +62,17 @@ out.println("<div align='center'>");
 out.println("<table>");
 out.println("<caption class='cpt'>"+today_year+"-"+today_month+"-"+today_date+"</caption");
 
-String days = "일월화수목금토";
+String[] days = {"일","월","화","수","목","금","토"};
 out.println("<tr>");
 for (int i = 0; i < 7; i++){
-	char ch_day = days.charAt(i);
-	String temp_str = Character.toString(ch_day);
-	out.println("<td class='day'>"+parseDay(cnt, temp_str)+"</td>");
+	String ch_day = days[i];
+	out.println("<td class='day'>"+parseDay(cnt, ch_day)+"</td>");
 	cnt++;
 }
 out.println("</tr>");
 
 out.println("<tr>");
-for (int i = 0; i <= day; i++){
+for (int i = 1; i < day-1; i++){
 	out.println("<td>&nbsp;</td>");
 	cnt++;
 }
