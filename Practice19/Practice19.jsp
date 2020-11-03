@@ -1,5 +1,3 @@
-<!--2019075 신효경-->
-<!--최적 실행환경 Chrome-->
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="java.util.Calendar"%>
 <%!
