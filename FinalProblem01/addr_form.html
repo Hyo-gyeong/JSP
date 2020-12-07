@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>addr_form</title>
+<style>
+table, td{
+border:1px solid black;
+}
+td{
+height:30px;
+}
+.left{
+width:80px;
+}
+.right{
+width:120px;
+}
+table{
+margin:auto;
+}
+h1{
+text-align:center;
+}
+</style>
+</head>
+<body>
+<h1>주소록 등록</h1><BR>
+<hr>
+<form method=post action="addr_add.jsp">
+<table>
+	<tr>
+		<td class="left">이름</td>
+		<td class="right"><input name="username" type="text"></td>
+	</tr>
+	<tr>
+		<td class="left">전화번호</td>
+		<td class="right"><input name="tel" type="text"></td>
+	</tr>
+	<tr>
+		<td class="left">이메일</td>
+		<td class="right"><input name="email" type="text"></td>
+	</tr>
+	<tr>
+		<td class="left">성별</td>
+		<td class="right">
+			<select name="sex">
+				<option value=0>여</option>
+				<option value=1>남</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="left">그룹</td>
+		<td class="right">
+			<select name="group">
+				<option value=0>가족</option>
+				<option value=1>친구</option>
+				<option value=2>직장</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td class="left">즐겨찾기</td>
+		<td class="right">
+			<select name="favorite">
+				<option value=0>미선택</option>
+				<option value=1>선택</option>
+			</select>
+		</td>		
+	</tr>
+	<tr>
+		<td colspan=2 style="text-align:center;">
+			<input class="btn" type="submit" value="확인">
+			<input class="btn" type="reset" value="취소">
+		</td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
